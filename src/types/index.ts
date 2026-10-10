@@ -54,13 +54,6 @@ export interface HotelInfo {
   bookingUrl?: string
 }
 
-export interface InfoCard {
-  id: string
-  title: string
-  description: string
-  icon: string
-}
-
 export interface ContactPerson {
   id: string
   role: string
@@ -95,8 +88,7 @@ export interface WeddingConfig {
     embedId: string
     poster: string
   }
-  hotels: HotelInfo[]
-  importantInfo: InfoCard[]
+  hotels?: HotelInfo[]
   contacts: ContactPerson[]
   whatsappNumber: string // digits only, with country code, e.g. "911234567890"
   music: { title: string; src: string }

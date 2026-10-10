@@ -64,12 +64,12 @@ export const weddingConfig: WeddingConfig = {
   heroBackdrop: placeholderImage('', 1920, 1080),
 
   venue: {
-    name: '[Venue Name]',
-    address: '[Venue Address]',
-    city: '[City, State]',
-    date: '[Wedding Date]',
+    name: 'Shree Padmavathi Prarthana Mahila Mandali',
+    address: 'JCM6+9W8, Bommagunta, Nehru Nagar, Tirupati, Andhra Pradesh 517501',
+    city: 'Tirupati, Andhra Pradesh',
+    date: '2026-11-26',
     eventLabel: 'Wedding Ceremony',
-    mapsUrl: 'https://maps.google.com/?q=[Venue+Name]',
+    mapsUrl: 'https://maps.app.goo.gl/xay7JARqpxTL2Qk57',
     mapsEmbedUrl: '',
     photo: placeholderImage('Venue Photograph', 1400, 900),
   },
@@ -78,12 +78,12 @@ export const weddingConfig: WeddingConfig = {
     {
       id: 'engagement',
       name: 'Engagement',
-      date: '',
-      time: '[Event Time]',
-      venue: '[Venue Name]',
-      address: '[Venue Address]',
-      mapsUrl: '',
-      dressCode: '',
+      date: '2026-09-02',
+      time: '10:05 AM',
+      venue: 'Shree Padmavathi Prarthana Mahila Mandali',
+      address: 'JCM6+9W8, Bommagunta, Nehru Nagar, Tirupati, Andhra Pradesh 517501',
+      mapsUrl: 'https://maps.app.goo.gl/xay7JARqpxTL2Qk57',
+      dressCode: 'Traditional attire',
       description: 'Join us as we formally announce our commitment to one another, surrounded by our closest family and friends.',
       icon: 'engagement',
     },
@@ -102,7 +102,7 @@ export const weddingConfig: WeddingConfig = {
     {
       id: 'wedding',
       name: 'Wedding Ceremony',
-      date: '',
+      date: '2026-11-26',
       time: '[Event Time]',
       venue: '[Venue Name]',
       address: '[Venue Address]',
@@ -128,42 +128,42 @@ export const weddingConfig: WeddingConfig = {
   loveStory: [
     {
       id: 'first-hello',
-      date: '[Date]',
+      date: '',
       title: 'The First Hello',
       story: 'Replace this with how you first crossed paths — the place, the moment, the small detail neither of you forgot.',
       image: placeholderImage('The First Hello', 700, 700),
     },
     {
       id: 'when-we-met',
-      date: '[Date]',
+      date: '',
       title: 'When We Met',
       story: 'Replace this with the story of your first real conversation and what made it memorable.',
       image: placeholderImage('When We Met', 700, 700),
     },
     {
       id: 'the-beginning',
-      date: '[Date]',
+      date: '',
       title: 'The Beginning',
       story: 'Replace this with how you decided to give each other a chance.',
       image: placeholderImage('The Beginning', 700, 700),
     },
     {
       id: 'falling-in-love',
-      date: '[Date]',
+      date: '',
       title: 'Falling in Love',
       story: 'Replace this with a memory that captures when you both knew this was something real.',
       image: placeholderImage('Falling in Love', 700, 700),
     },
     {
       id: 'the-proposal',
-      date: '[Date]',
+      date: '02-09-2026',
       title: 'The Proposal',
       story: 'Replace this with the story of the proposal — where it happened and how it felt.',
       image: placeholderImage('The Proposal', 700, 700),
     },
     {
       id: 'forever-begins',
-      date: '[Wedding Date]',
+      date: '26-11-2026',
       title: 'Forever Begins',
       story: 'And now, surrounded by the people we love most, our forever begins.',
       image: placeholderImage('Forever Begins', 700, 700),
@@ -172,7 +172,7 @@ export const weddingConfig: WeddingConfig = {
 
   gallery: [
     
-    { id: 'g1', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments', type: 'image' },
+    // { id: 'g1', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments', type: 'image' },
     { id: 'ga', src: engaged, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
     { id: 'g2', src: engaged1, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
     { id: 'g3', src: engaged2, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
@@ -190,7 +190,7 @@ export const weddingConfig: WeddingConfig = {
     { id: 'g3k', src: engaged14, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
     { id: 'g3l', src: engaged15, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
 
-    { id: 'g4', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding', type: 'image' },
+    // { id: 'g4', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding', type: 'image' },
     { id: 'g5a', src: F1, category: 'Family', alt: 'Family', type: 'image' },
     { id: 'g5b', src: F2, category: 'Family', alt: 'Family', type: 'image' },
     { id: 'g5c', src: F3, category: 'Family', alt: 'Family', type: 'image' },
@@ -203,11 +203,11 @@ export const weddingConfig: WeddingConfig = {
     { id: 'g11b', src: C2, category: 'Cousin', alt: 'Cousin', type: 'image' },
     { id: 'g11c', src: C3, category: 'Cousin', alt: 'Cousin', type: 'image' },
     { id: 'g11d', src: C4, category: 'Cousin', alt: 'Cousin', type: 'image' },
-    { id: 'g6', src: placeholderImage('Friends', 800, 1000), category: 'Friends', alt: 'Friends', type: 'image' },
-    { id: 'g7', src: placeholderImage('Wedding', 800, 1000), category: 'Wedding', alt: 'Wedding', type: 'image' },
-    { id: 'g8', src: placeholderImage('Celebrations', 800, 1000), category: 'Celebrations', alt: 'Celebrations', type: 'image' },
-    { id: 'g9', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding', type: 'image' },
-    { id: 'g10', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments', type: 'image' },
+    // { id: 'g6', src: placeholderImage('Friends', 800, 1000), category: 'Friends', alt: 'Friends', type: 'image' },
+    // { id: 'g7', src: placeholderImage('Wedding', 800, 1000), category: 'Wedding', alt: 'Wedding', type: 'image' },
+    // { id: 'g8', src: placeholderImage('Celebrations', 800, 1000), category: 'Celebrations', alt: 'Celebrations', type: 'image' },
+    // { id: 'g9', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding', type: 'image' },
+    // { id: 'g10', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments', type: 'image' },
     { id: 'g11', src: V1, category: 'Our Moments', alt: 'Video: Our Moments', type: 'video' },
     { id: 'g12', src: V2, category: 'Our Moments', alt: 'Video: Our Moments', type: 'video' },
     
@@ -219,34 +219,6 @@ export const weddingConfig: WeddingConfig = {
     embedId: '', // e.g. YouTube video ID or Vimeo ID
     poster: placeholderImage('Our Journey Together', 1280, 720),
   },
-
-  hotels: [
-    {
-      id: 'hotel-1',
-      name: '[Hotel Name]',
-      address: '[Hotel Address]',
-      distanceFromVenue: '[Distance from Venue]',
-      bookingUrl: '',
-    },
-    {
-      id: 'hotel-2',
-      name: '[Hotel Name]',
-      address: '[Hotel Address]',
-      distanceFromVenue: '[Distance from Venue]',
-      bookingUrl: '',
-    },
-  ],
-
-  importantInfo: [
-    { id: 'parking', title: 'Parking', description: '[Add parking instructions for guests]', icon: 'parking' },
-    { id: 'accommodation', title: 'Accommodation', description: '[Add accommodation details or link to Travel & Stay]', icon: 'accommodation' },
-    { id: 'transportation', title: 'Transportation', description: '[Add shuttle / transport details]', icon: 'transportation' },
-    { id: 'dress-code', title: 'Dress Code', description: '[Add general dress code guidance]', icon: 'dress' },
-    { id: 'photography', title: 'Photography', description: '[Add photography / videography guidance for guests]', icon: 'camera' },
-    { id: 'children', title: 'Children', description: '[Let guests know if the event is child-friendly]', icon: 'children' },
-    { id: 'weather', title: 'Weather', description: '[Add expected weather and what to bring]', icon: 'weather' },
-    { id: 'contact', title: 'Contact Information', description: 'See the Contact section below for our wedding coordinator and family contacts.', icon: 'contact' },
-  ],
 
   contacts: [
     { id: 'coordinator', role: 'Wedding Coordinator', name: '[Coordinator Name]', phone: '[Phone Number]', whatsapp: '' },
