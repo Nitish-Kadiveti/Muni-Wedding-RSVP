@@ -28,6 +28,11 @@ export const CLOUDINARY_CONFIG: {
   baseUrl: '',
 }
 
+// Initialize base URL
+if (CLOUDINARY_CONFIG.cloudName) {
+  CLOUDINARY_CONFIG.baseUrl = `https://res.cloudinary.com/${CLOUDINARY_CONFIG.cloudName}/image/upload`
+}
+
 /**
  * Gallery categories - must match weddingConfig.ts GalleryCategory
  */

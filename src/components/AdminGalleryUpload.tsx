@@ -8,7 +8,7 @@
  * - Copy URLs to clipboard
  * - Auto-updates weddingConfig.ts gallery entries
  */
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CLOUDINARY_CONFIG,
@@ -124,8 +124,9 @@ export default function AdminGalleryUpload() {
         // Add tags
         formData.append('tags', `wedding-${currentCategory.toLowerCase()}`)
 
+        const resourceType = file.type.startsWith('image/') ? 'image' : 'video'
         const response = await fetch(
-          `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+          `https://api.cloudinary.com/v1_1/${cloudName}/${resourceType}/upload`,
           {
             method: 'POST',
             body: formData,
@@ -169,6 +170,34 @@ export default function AdminGalleryUpload() {
 
     setIsUploading(false)
     setUploadProgress(0)
+  }
+
+  // Drag and drop handlers
+  const [isDragging, setIsDragging] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault()
+    setIsDragging(true)
+  }
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault()
+    setIsDragging(false)
+  }
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault()
+    setIsDragging(false)
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      handleUpload(e.dataTransfer.files)
+    }
+  }
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      handleUpload(e.target.files)
+    }
   }
 
   const handleCopyUrl = useCallback((url: string) => {
@@ -258,7 +287,17 @@ export default function AdminGalleryUpload() {
         </div>
 
         {/* Upload Zone */}
-        <div className="mb-8 p-8 border-2 border-dashed border-gold/30 rounded-xl hover:border-gold/50 transition-colors cursor-pointer bg-ivory/50">
+        <div
+          className={`mb-8 p-8 border-2 border-dashed rounded-xl transition-colors cursor-pointer ${
+            isDragging
+              ? 'border-gold bg-gold/10'
+              : 'border-gold/30 hover:border-gold/50 bg-ivory/50'
+          }`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          onClick={() => fileInputRef.current?.click()}
+        >
           <div className="flex flex-col items-center gap-3">
             <svg
               width="48"
@@ -273,15 +312,16 @@ export default function AdminGalleryUpload() {
               <polyline points="17 8 12 3 7 8" />
               <line x1="12" y1="3" x2="12" y2="15" />
             </svg>
-            <p className="text-ink/60 text-sm">Drag files here or click</p>
+            <p className="text-ink/60 text-sm">
+              {isDragging ? 'Drop files here' : 'Drag files here or click'}
+            </p>
             <p className="text-text-gold text-xs">JPG, PNG, MP4, MOV</p>
             <input
+              ref={fileInputRef}
               type="file"
               multiple
               accept="image/*,video/*,.mov,.mp4,.avi,.wmv"
-              onChange={(e) => {
-                if (e.target.files) handleUpload(e.target.files)
-              }}
+              onChange={handleFileSelect}
               className="hidden"
             />
           </div>
