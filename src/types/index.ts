@@ -33,6 +33,7 @@ export interface GalleryImage {
   src: string
   category: GalleryCategory
   alt: string
+  type?: 'image' | 'video'
 }
 
 export type GalleryCategory =
@@ -102,14 +103,3 @@ export interface WeddingConfig {
   siteUrl: string
 }
 
-export interface RSVPPayload {
-  fullName: string
-  phone: string
-  email: string
-  guestCount: number
-  guestNames: string
-  events: string[]
-  attendance: 'accepting' | 'declining'
-  dietary: string
-  message: string
-}

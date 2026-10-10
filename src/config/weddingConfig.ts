@@ -29,6 +29,8 @@ import C1 from '../Pics/C1.jpg'
 import C2 from '../Pics/C2.jpg'
 import C3 from '../Pics/C3.jpg'
 import C4 from '../Pics/C4.jpg'
+import V1 from '../Pics/V1.mp4'
+import V2 from '../Pics/V2.mp4'
 
 /**
  * ============================================================
@@ -170,42 +172,44 @@ export const weddingConfig: WeddingConfig = {
 
   gallery: [
     
-    { id: 'g1', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments' },
-    { id: 'ga', src: engaged, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g2', src: engaged1, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3', src: engaged2, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3a', src: engaged3, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3b', src: engaged4, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3c', src: engaged5, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3m', src: engaged6, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3d', src: engaged7, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3e', src: engaged8, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3f', src: engaged9, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3g', src: engaged10, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3h', src: engaged11, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3i', src: engaged12, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3j', src: engaged13, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3k', src: engaged14, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
-    { id: 'g3l', src: engaged15, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini' },
+    { id: 'g1', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments', type: 'image' },
+    { id: 'ga', src: engaged, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g2', src: engaged1, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3', src: engaged2, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3a', src: engaged3, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3b', src: engaged4, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3c', src: engaged5, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3m', src: engaged6, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3d', src: engaged7, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3e', src: engaged8, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3f', src: engaged9, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3g', src: engaged10, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3h', src: engaged11, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3i', src: engaged12, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3j', src: engaged13, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3k', src: engaged14, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
+    { id: 'g3l', src: engaged15, category: 'Engagement', alt: 'Engagement — Muni Kumar & Shalini', type: 'image' },
 
-    { id: 'g4', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding' },
-    { id: 'g5a', src: F1, category: 'Family', alt: 'Family' },
-    { id: 'g5b', src: F2, category: 'Family', alt: 'Family' },
-    { id: 'g5c', src: F3, category: 'Family', alt: 'Family' },
-    { id: 'g5d', src: F4, category: 'Family', alt: 'Family' },
-    { id: 'g5e', src: F6, category: 'Family', alt: 'Family' },
-    { id: 'g5f', src: F7, category: 'Family', alt: 'Family' },
-    { id: 'g5g', src: F8, category: 'Family', alt: 'Family' },
-    { id: 'g5h', src: F9, category: 'Family', alt: 'Family' },
-    { id: 'g11a', src: C1, category: 'Cousin', alt: 'Cousin' },
-    { id: 'g11b', src: C2, category: 'Cousin', alt: 'Cousin' },
-    { id: 'g11c', src: C3, category: 'Cousin', alt: 'Cousin' },
-    { id: 'g11d', src: C4, category: 'Cousin', alt: 'Cousin' },
-    { id: 'g6', src: placeholderImage('Friends', 800, 1000), category: 'Friends', alt: 'Friends' },
-    { id: 'g7', src: placeholderImage('Wedding', 800, 1000), category: 'Wedding', alt: 'Wedding' },
-    { id: 'g8', src: placeholderImage('Celebrations', 800, 1000), category: 'Celebrations', alt: 'Celebrations' },
-    { id: 'g9', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding' },
-    { id: 'g10', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments' },
+    { id: 'g4', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding', type: 'image' },
+    { id: 'g5a', src: F1, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5b', src: F2, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5c', src: F3, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5d', src: F4, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5e', src: F6, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5f', src: F7, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5g', src: F8, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5h', src: F9, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g11a', src: C1, category: 'Cousin', alt: 'Cousin', type: 'image' },
+    { id: 'g11b', src: C2, category: 'Cousin', alt: 'Cousin', type: 'image' },
+    { id: 'g11c', src: C3, category: 'Cousin', alt: 'Cousin', type: 'image' },
+    { id: 'g11d', src: C4, category: 'Cousin', alt: 'Cousin', type: 'image' },
+    { id: 'g6', src: placeholderImage('Friends', 800, 1000), category: 'Friends', alt: 'Friends', type: 'image' },
+    { id: 'g7', src: placeholderImage('Wedding', 800, 1000), category: 'Wedding', alt: 'Wedding', type: 'image' },
+    { id: 'g8', src: placeholderImage('Celebrations', 800, 1000), category: 'Celebrations', alt: 'Celebrations', type: 'image' },
+    { id: 'g9', src: placeholderImage('Pre-Wedding', 800, 1000), category: 'Pre-Wedding', alt: 'Pre-Wedding', type: 'image' },
+    { id: 'g10', src: placeholderImage('Our Moments', 800, 1000), category: 'Our Moments', alt: 'Our Moments', type: 'image' },
+    { id: 'g11', src: V1, category: 'Our Moments', alt: 'Video: Our Moments', type: 'video' },
+    { id: 'g12', src: V2, category: 'Our Moments', alt: 'Video: Our Moments', type: 'video' },
     
   ],
 
@@ -250,7 +254,7 @@ export const weddingConfig: WeddingConfig = {
     { id: 'groom-family', role: "Groom's Family", name: "[Groom's Family Contact]", phone: '[Phone Number]' },
   ],
 
-  // Configure once — used for the WhatsApp RSVP + share buttons across the site.
+  // Configure once — used for WhatsApp share buttons across the site.
   // Digits only, with country code, no + or spaces. Example: "911234567890"
   whatsappNumber: '',
 

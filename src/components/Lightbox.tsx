@@ -10,7 +10,7 @@ interface LightboxProps {
 
 export default function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
   const touchStartX = useRef<number | null>(null)
-  const image = images[index]
+  const media = images[index]
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -22,13 +22,13 @@ export default function Lightbox({ images, index, onClose, onNavigate }: Lightbo
     return () => document.removeEventListener('keydown', onKey)
   }, [index, images.length, onClose, onNavigate])
 
-  if (!image) return null
+  if (!media) return null
 
   return (
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={`Photo ${index + 1} of ${images.length}`}
+      aria-label={media.type === 'video' ? `Video ${index + 1} of ${images.length}` : `Photo ${index + 1} of ${images.length}`}
       className="fixed inset-0 z-50 bg-ink/90 flex items-center justify-center px-4 animate-fadeIn"
       onClick={onClose}
       onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
@@ -55,7 +55,7 @@ export default function Lightbox({ images, index, onClose, onNavigate }: Lightbo
           e.stopPropagation()
           onNavigate((index - 1 + images.length) % images.length)
         }}
-        aria-label="Previous photo"
+        aria-label="Previous item"
         className="absolute left-2 md:left-6 text-ivory hover:text-gold-light p-2"
       >
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -63,19 +63,28 @@ export default function Lightbox({ images, index, onClose, onNavigate }: Lightbo
         </svg>
       </button>
 
-      <img
-        src={image.src}
-        alt={image.alt}
-        className="max-h-[85vh] max-w-[88vw] object-contain border border-gold/40"
-        onClick={(e) => e.stopPropagation()}
-      />
+      {media.type === 'video' ? (
+        <video
+          src={media.src}
+          className="max-h-[85vh] max-w-[88vw] object-contain border border-gold/40 rounded-sm"
+          controls
+          onClick={(e) => e.stopPropagation()}
+        />
+      ) : (
+        <img
+          src={media.src}
+          alt={media.alt}
+          className="max-h-[85vh] max-w-[88vw] object-contain border border-gold/40"
+          onClick={(e) => e.stopPropagation()}
+        />
+      )}
 
       <button
         onClick={(e) => {
           e.stopPropagation()
           onNavigate((index + 1) % images.length)
         }}
-        aria-label="Next photo"
+        aria-label="Next item"
         className="absolute right-2 md:right-6 text-ivory hover:text-gold-light p-2"
       >
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -84,7 +93,7 @@ export default function Lightbox({ images, index, onClose, onNavigate }: Lightbo
       </button>
 
       <p className="absolute bottom-5 text-ivory/70 text-xs font-body tracking-wide">
-        {index + 1} / {images.length} · {image.category}
+        {index + 1} / {images.length} · {media.category}
       </p>
     </div>
   )

@@ -41,7 +41,7 @@ export default function ContactSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white text-sm font-body px-6 py-2.5 hover:brightness-95 transition"
             >
-              RSVP / Chat on WhatsApp
+              Chat on WhatsApp
             </a>
           </div>
         </Reveal>

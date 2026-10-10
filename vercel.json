@@ -2,13 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "functions": {
-    "api/rsvp.js": {
-      "memory": 128,
-      "maxDuration": 10
-    }
-  },
-  "headers": [
+    "headers": [
     {
       "source": "/(.*)\\.(jpg|jpeg|png|svg|webp|woff2)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]

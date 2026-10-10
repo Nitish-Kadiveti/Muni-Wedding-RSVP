@@ -108,19 +108,35 @@ export default function Gallery() {
       )}
 
       <div className="max-w-6xl mx-auto columns-2 sm:columns-3 gap-4 [column-fill:balance]">
-        {filtered.map((image, i) => (
+        {filtered.map((item, i) => (
           <button
-            key={image.id}
+            key={item.id}
             onClick={() => setLightboxIndex(i)}
             className="block w-full mb-4 break-inside-avoid group relative overflow-hidden border border-gold/20"
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+            {item.type === 'video' ? (
+              <video
+                src={item.src}
+                playsInline
+                muted
+                loop
+                preload="metadata"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            ) : (
+              <img
+                src={item.src}
+                alt={item.alt}
+                loading="lazy"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            )}
             <span className="absolute inset-0 bg-burgundy/0 group-hover:bg-burgundy/10 transition-colors" />
+            {item.type === 'video' && (
+              <span className="absolute bottom-2 right-2 bg-burgundy/80 text-ivory text-[10px] font-body px-2 py-0.5 rounded">
+                Video
+              </span>
+            )}
           </button>
         ))}
       </div>

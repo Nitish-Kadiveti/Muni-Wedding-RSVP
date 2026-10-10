@@ -7,7 +7,6 @@ const NAV_ITEMS = [
   { id: 'events', label: 'Wedding Events' },
   { id: 'venue', label: 'Venue' },
   { id: 'gallery', label: 'Gallery' },
-  { id: 'rsvp', label: 'RSVP' },
   { id: 'contact', label: 'Contact' },
 ]
 

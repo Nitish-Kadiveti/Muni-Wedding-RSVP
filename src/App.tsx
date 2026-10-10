@@ -12,7 +12,6 @@ import FamilySection from './components/FamilySection'
 import DressCode from './components/DressCode'
 import TravelStay from './components/TravelStay'
 import ImportantInfo from './components/ImportantInfo'
-import RSVPForm from './components/RSVPForm'
 import ContactSection from './components/ContactSection'
 import MusicPlayer from './components/MusicPlayer'
 import Footer from './components/Footer'
@@ -44,7 +43,6 @@ export default function App() {
         <DressCode />
         <TravelStay />
         <ImportantInfo />
-        <RSVPForm />
         <ContactSection />
       </main>
 
