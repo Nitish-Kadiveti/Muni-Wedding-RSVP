@@ -29,6 +29,7 @@ import C1 from '../Pics/C1.jpg'
 import C2 from '../Pics/C2.jpg'
 import C3 from '../Pics/C3.jpg'
 import C4 from '../Pics/C4.jpg'
+import venuePhoto from '../Pics/venue.jpg'
 import V1 from '../Pics/V1.mp4'
 import V2 from '../Pics/V2.mp4'
 
@@ -64,14 +65,14 @@ export const weddingConfig: WeddingConfig = {
   heroBackdrop: placeholderImage('', 1920, 1080),
 
   venue: {
-    name: 'Shree Padmavathi Prarthana Mahila Mandali',
-    address: 'JCM6+9W8, Bommagunta, Nehru Nagar, Tirupati, Andhra Pradesh 517501',
+    name: 'KSR Kalyana Mandapam',
+    address: 'Opp. Padmavathi Ammavari Temple, Tiruchanoor',
     city: 'Tirupati, Andhra Pradesh',
     date: '2026-11-26',
     eventLabel: 'Wedding Ceremony',
     mapsUrl: 'https://maps.app.goo.gl/xay7JARqpxTL2Qk57',
     mapsEmbedUrl: '',
-    photo: placeholderImage('Venue Photograph', 1400, 900),
+    photo: venuePhoto,
   },
 
   events: [
@@ -87,26 +88,26 @@ export const weddingConfig: WeddingConfig = {
       description: 'Join us as we formally announce our commitment to one another, surrounded by our closest family and friends.',
       icon: 'engagement',
     },
-    {
-      id: 'haldi',
-      name: 'Haldi',
-      date: '',
-      time: '[Event Time]',
-      venue: '[Venue Name]',
-      address: '[Venue Address]',
-      mapsUrl: '',
-      dressCode: 'Yellow attire suggested',
-      description: 'A joyful turmeric ceremony to bless the couple with warmth, radiance and good fortune ahead of the wedding.',
-      icon: 'haldi',
-    },
+    // {
+    //   id: 'haldi',
+    //   name: 'Haldi',
+    //   date: '2026-11-25',
+    //   time: '[Event Time]',
+    //   venue: '[Venue Name]',
+    //   address: '[Venue Address]',
+    //   mapsUrl: '',
+    //   dressCode: 'Yellow attire suggested',
+    //   description: 'A joyful turmeric ceremony to bless the couple with warmth, radiance and good fortune ahead of the wedding.',
+    //   icon: 'haldi',
+    // },
     {
       id: 'wedding',
       name: 'Wedding Ceremony',
       date: '2026-11-26',
-      time: '[Event Time]',
-      venue: '[Venue Name]',
-      address: '[Venue Address]',
-      mapsUrl: '',
+      time: '9:10 AM',
+      venue: 'KSR Kalyana Mandapam',
+      address: 'Opp. Padmavathi Ammavari Temple, Tiruchanoor',
+      mapsUrl: 'https://maps.app.goo.gl/HYXzfpssZ3KhtBts5',
       dressCode: 'Traditional attire',
       description: 'The sacred union of Muni Kumar & Shalini, blessed by family, tradition and rituals passed through generations.',
       icon: 'wedding',
@@ -114,11 +115,11 @@ export const weddingConfig: WeddingConfig = {
     {
       id: 'reception',
       name: 'Reception',
-      date: '',
-      time: '[Event Time]',
-      venue: '[Venue Name]',
-      address: '[Venue Address]',
-      mapsUrl: '',
+      date: '2026-11-25',
+      time: '7:00 PM',
+      venue: 'KSR Kalyana Mandapam',
+      address: 'Opp. Padmavathi Ammavari Temple, Tiruchanoor',
+      mapsUrl: 'https://maps.app.goo.gl/HYXzfpssZ3KhtBts5',
       dressCode: 'Formal / Evening wear',
       description: 'Join us for dinner and celebration as we begin this new chapter, surrounded by everyone we love.',
       icon: 'reception',
