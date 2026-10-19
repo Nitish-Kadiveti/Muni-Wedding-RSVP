@@ -63,7 +63,7 @@ export default function Venue() {
         </Reveal>
       ) : (
         <p className="text-center font-body text-xs text-ink/50 mt-4">
-          Add a Google Maps embed URL to <code>venue.mapsEmbedUrl</code> in the wedding config to show an interactive map here.
+          {/* Add a Google Maps embed URL to <code>venue.mapsEmbedUrl</code> in the wedding config to show an interactive map here. */}
         </p>
       )}
     </section>
