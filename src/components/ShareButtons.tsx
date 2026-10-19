@@ -11,8 +11,16 @@ import {
 
 export default function ShareButtons() {
   const [copied, setCopied] = useState(false)
-  const siteUrl = typeof window !== 'undefined' ? window.location.href : weddingConfig.siteUrl
-  const message = buildInviteMessage(weddingConfig.groom.name, weddingConfig.bride.name, siteUrl)
+  const siteUrl = weddingConfig.siteUrl
+  const message = buildInviteMessage(
+    weddingConfig.groom.name,
+    weddingConfig.bride.name,
+    siteUrl,
+    {
+      date: '26 November 2026',
+      venue: `${weddingConfig.venue.name}, ${weddingConfig.venue.city}`,
+    }
+  )
 
   async function handleCopy() {
     const ok = await copyToClipboard(siteUrl)

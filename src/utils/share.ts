@@ -3,8 +3,20 @@ export function whatsappShareUrl(message: string, phoneDigitsOnly?: string): str
   return `${base}?text=${encodeURIComponent(message)}`
 }
 
-export function buildInviteMessage(groom: string, bride: string, siteUrl: string): string {
-  return `You're invited to celebrate the wedding of ${groom} & ${bride} ❤️\n\n${siteUrl}`
+export function buildInviteMessage(
+  groom: string,
+  bride: string,
+  siteUrl: string,
+  options?: { date?: string; venue?: string }
+): string {
+  const lines = [
+    `You're invited to celebrate the wedding of`,
+    `${groom} & ${bride} ❤️`,
+  ]
+  if (options?.date) lines.push(`Date: ${options.date}`)
+  if (options?.venue) lines.push(`Venue: ${options.venue}`)
+  lines.push('', siteUrl)
+  return lines.join('\n')
 }
 
 export function facebookShareUrl(url: string): string {
