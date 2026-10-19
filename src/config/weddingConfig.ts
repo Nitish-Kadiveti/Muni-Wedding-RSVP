@@ -222,9 +222,9 @@ export const weddingConfig: WeddingConfig = {
   },
 
   contacts: [
-    { id: 'coordinator', role: 'Wedding Coordinator', name: '[Coordinator Name]', phone: '[Phone Number]', whatsapp: '' },
-    { id: 'bride-family', role: "Bride's Family", name: "[Bride's Family Contact]", phone: '[Phone Number]' },
-    { id: 'groom-family', role: "Groom's Family", name: "Raja", phone: '8939619200' },
+    { id: 'coordinator', role: 'Wedding Coordinators', name: '', phone: '', whatsapp: '' },
+    { id: 'bride-family', role: "Bride's Family", name: "Mohana Krishnaiah", phone: '' },
+    { id: 'groom-family', role: "Groom's Family", name: "Raja", phone: '' },
   ],
 
   // Configure once — used for WhatsApp share buttons across the site.
