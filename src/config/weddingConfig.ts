@@ -222,7 +222,7 @@ export const weddingConfig: WeddingConfig = {
   },
 
   contacts: [
-    { id: 'coordinator', role: 'Wedding Coordinators', name: '', phone: '', whatsapp: '' },
+    { id: 'coordinator', role: '', name: '', phone: 'Wedding Coordinators', whatsapp: '' },
     { id: 'bride-family', role: "Bride's Family", name: "Mohana Krishnaiah", phone: '' },
     { id: 'groom-family', role: "Groom's Family", name: "Raja", phone: '' },
   ],
