@@ -10,9 +10,9 @@ export default function EventsSection() {
         <Reveal>
           <h2 className="section-title text-3xl md:text-4xl text-burgundy">The Wedding Celebrations</h2>
           <OrnamentDivider />
-          <p className="font-body text-sm text-ink/60 max-w-md mx-auto mt-2">
+          {/* <p className="font-body text-sm text-ink/60 max-w-md mx-auto mt-2">
             Details for each function below are placeholders — replace them in the wedding configuration file.
-          </p>
+          </p> */}
         </Reveal>
       </div>
 

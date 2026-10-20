@@ -48,12 +48,12 @@ export const weddingConfig: WeddingConfig = {
   groom: {
     name: 'Muni Kumar',
     fullName: 'Muni Kumar',
-    parents: "Gopi & Nirmalamma",
+    parents: "Gopi & Nirmala",
   },
   bride: {
     name: 'Shalini',
     fullName: 'Shalini',
-    parents: "Mohana Krishnaiah & Krishnavenamma",
+    parents: "Hari Kishore & Krishna Kumari",
   },
 
   // Primary ceremony date & time used for the countdown. Use ISO format with timezone offset.
@@ -223,7 +223,7 @@ export const weddingConfig: WeddingConfig = {
 
   contacts: [
     { id: 'coordinator', role: '', name: '', phone: 'Wedding Coordinators', whatsapp: '' },
-    { id: 'bride-family', role: "Bride's Family", name: "Mohana Krishnaiah", phone: '' },
+    { id: 'bride-family', role: "Bride's Family", name: "Hari Kishore", phone: '' },
     { id: 'groom-family', role: "Groom's Family", name: "Raja", phone: '' },
   ],
 
