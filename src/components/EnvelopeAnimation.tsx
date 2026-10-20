@@ -71,9 +71,10 @@ export default function EnvelopeAnimation({
           className={`relative w-[280px] h-[190px] sm:w-[340px] sm:h-[230px] ${
             isLetterOut ? '-translate-y-8' : ''
           } ${phase === 'done' ? 'opacity-0 scale-95' : ''} transition-all duration-700 ${
-            isSealed ? 'animate-envelope-float' : ''
+            isSealed ? 'animate-envelope-float cursor-pointer' : ''
           }`}
           style={{ perspective: '1200px' }}
+          onClick={handleOpen}
         >
           {/* Envelope body */}
           <div
@@ -152,7 +153,7 @@ export default function EnvelopeAnimation({
           onClick={handleOpen}
           disabled={!isSealed}
           aria-label="Tap to open the invitation envelope"
-          className="mt-12 flex flex-col items-center gap-3 text-center transition-opacity duration-500 opacity-100"
+          className="mt-12 flex flex-col items-center gap-3 text-center transition-opacity duration-500 opacity-100 focus:!outline-none"
         >
           <span className="font-body text-xs tracking-[0.3em] text-gold-light uppercase animate-shimmer">
             Tap to Open
