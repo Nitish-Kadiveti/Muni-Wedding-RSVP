@@ -25,6 +25,11 @@ import F6 from '../Pics/F6.jpg'
 import F7 from '../Pics/F7.jpg'
 import F8 from '../Pics/F8.jpg'
 import F9 from '../Pics/F9.jpg'
+import F10 from '../Pics/B1.jpg'
+import F11 from '../Pics/B2.jpg'
+import F12 from '../Pics/B3.jpg'
+import F13 from '../Pics/B4.jpg'
+import F14 from '../Pics/B5.jpg'
 import C1 from '../Pics/C1.jpg'
 import C2 from '../Pics/C2.jpg'
 import C3 from '../Pics/C3.jpg'
@@ -200,6 +205,11 @@ export const weddingConfig: WeddingConfig = {
     { id: 'g5f', src: F7, category: 'Family', alt: 'Family', type: 'image' },
     { id: 'g5g', src: F8, category: 'Family', alt: 'Family', type: 'image' },
     { id: 'g5h', src: F9, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5i', src: F10, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5j', src: F11, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5k', src: F12, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5l', src: F13, category: 'Family', alt: 'Family', type: 'image' },
+    { id: 'g5m', src: F14, category: 'Family', alt: 'Family', type: 'image' },
     { id: 'g11a', src: C1, category: 'Cousin', alt: 'Cousin', type: 'image' },
     { id: 'g11b', src: C2, category: 'Cousin', alt: 'Cousin', type: 'image' },
     { id: 'g11c', src: C3, category: 'Cousin', alt: 'Cousin', type: 'image' },

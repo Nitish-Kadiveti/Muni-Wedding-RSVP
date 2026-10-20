@@ -15,9 +15,11 @@ import ContactSection from './components/ContactSection'
 import MusicPlayer from './components/MusicPlayer'
 import Footer from './components/Footer'
 import AdminGalleryUpload from './components/AdminGalleryUpload'
+import EnvelopeAnimation from './components/EnvelopeAnimation'
 
 export default function App() {
   const [invitationOpen, setInvitationOpen] = useState(false)
+  const [envelopeShown, setEnvelopeShown] = useState(true)
 
   return (
     <Routes>
@@ -32,6 +34,14 @@ export default function App() {
 
           <Navbar onViewInvitation={() => setInvitationOpen(true)} />
           <InvitationModal open={invitationOpen} onClose={() => setInvitationOpen(false)} />
+          {envelopeShown && (
+            <EnvelopeAnimation
+              onOpenInvitation={() => {
+                setEnvelopeShown(false)
+                setInvitationOpen(true)
+              }}
+            />
+          )}
 
           <main>
             <Hero onViewInvitation={() => setInvitationOpen(true)} />
