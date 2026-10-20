@@ -152,9 +152,7 @@ export default function EnvelopeAnimation({
           onClick={handleOpen}
           disabled={!isSealed}
           aria-label="Tap to open the invitation envelope"
-          className={`mt-12 flex flex-col items-center gap-3 text-center transition-opacity duration-500 ${
-            isSealed ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
+          className="mt-12 flex flex-col items-center gap-3 text-center transition-opacity duration-500 opacity-100"
         >
           <span className="font-body text-xs tracking-[0.3em] text-gold-light uppercase animate-shimmer">
             Tap to Open
