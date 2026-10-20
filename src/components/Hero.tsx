@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { weddingConfig } from '../config/weddingConfig'
 import FloatingPetals from './FloatingPetals'
 import OrnamentDivider from './OrnamentDivider'
@@ -10,6 +11,17 @@ function formatDate(iso: string): string {
 
 export default function Hero({ onViewInvitation }: { onViewInvitation: () => void }) {
   const { groom, bride, weddingDateISO, tagline, couplePhoto } = weddingConfig
+  const [photoOpen, setPhotoOpen] = useState(false)
+
+  // Close the full-size photo on Escape.
+  useEffect(() => {
+    if (!photoOpen) return
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setPhotoOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [photoOpen])
 
   return (
     <section
@@ -28,15 +40,46 @@ export default function Hero({ onViewInvitation }: { onViewInvitation: () => voi
         </p>
 
         <div className="corner-frame mb-7">
-          <div className="w-40 h-48 md:w-56 md:h-64 rounded-t-full overflow-hidden border-2 border-gold shadow-[0_0_40px_rgba(184,146,63,0.25)]">
+          <button
+            onClick={() => setPhotoOpen(true)}
+            aria-label={`View ${groom.name} and ${bride.name} photo full size`}
+            className="block w-40 h-48 md:w-56 md:h-64 rounded-t-full overflow-hidden border-2 border-gold shadow-[0_0_40px_rgba(184,146,63,0.25)] cursor-zoom-in transition-shadow hover:shadow-[0_0_55px_rgba(184,146,63,0.45)]"
+          >
             <img
               src={couplePhoto}
               alt={`${groom.name} and ${bride.name}`}
               className="w-full h-full object-cover"
               loading="eager"
             />
-          </div>
+          </button>
         </div>
+
+        {photoOpen && (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Full photo of ${groom.name} and ${bride.name}`}
+            className="fixed inset-0 z-50 bg-ink/90 flex items-center justify-center px-4 animate-fadeIn"
+            onClick={() => setPhotoOpen(false)}
+          >
+            <button
+              onClick={() => setPhotoOpen(false)}
+              aria-label="Close full photo"
+              className="absolute top-5 right-5 text-ivory hover:text-gold-light"
+            >
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+              </svg>
+            </button>
+
+            <img
+              src={couplePhoto}
+              alt={`${groom.name} and ${bride.name}`}
+              className="max-h-[85vh] max-w-[88vw] object-contain border border-gold/40 rounded-sm"
+              loading="eager"
+            />
+          </div>
+        )}
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.15] text-ivory">
           {groom.name}
