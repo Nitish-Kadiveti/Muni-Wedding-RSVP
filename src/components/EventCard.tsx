@@ -24,10 +24,12 @@ export default function EventCard({ event }: { event: EventInfo }) {
           <dt className="text-gold-dark shrink-0 w-16">Time</dt>
           <dd>{event.time}</dd>
         </div>
-        <div className="flex gap-2">
-          <dt className="text-gold-dark shrink-0 w-16">Venue</dt>
-          <dd>{event.venue}</dd>
-        </div>
+        {event.venue && (
+          <div className="flex gap-2">
+            <dt className="text-gold-dark shrink-0 w-16">Venue</dt>
+            <dd>{event.venue}</dd>
+          </div>
+        )}
         <div className="flex gap-2">
           <dt className="text-gold-dark shrink-0 w-16">Dress</dt>
           <dd>{event.dressCode}</dd>
